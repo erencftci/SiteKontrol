@@ -1,0 +1,87 @@
+/* Güvenlik Dashboard Özel Stilleri */
+.securityDashboard {
+  background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+  min-height: 100vh;
+}
+
+.securityHeader {
+  background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
+  color: white;
+  box-shadow: 0 2px 10px rgba(211, 47, 47, 0.3);
+}
+
+.securitySidebar {
+  background: linear-gradient(180deg, #1a1a1a 0%, #2d2d2d 100%);
+  border-right: 2px solid #d32f2f;
+}
+
+.securityCard {
+  background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+  border: 1px solid #d32f2f30;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(211, 47, 47, 0.1);
+  transition: all 0.3s ease;
+}
+
+.securityCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(211, 47, 47, 0.2);
+}
+
+.securityStatCard {
+  background: linear-gradient(135deg, #d32f2f15 0%, #d32f2f05 100%);
+  border: 1px solid #d32f2f40;
+  border-radius: 12px;
+}
+
+.securityButton {
+  background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.securityButton:hover {
+  background: linear-gradient(135deg, #b71c1c 0%, #8e0000 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(211, 47, 47, 0.4);
+}
+
+.securityIcon {
+  background: rgba(211, 47, 47, 0.1);
+  color: #d32f2f;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.securityChart {
+  background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+  border: 1px solid #d32f2f20;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* Animasyonlar */
+@keyframes securityPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.securityPulse {
+  animation: securityPulse 2s infinite;
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+  .securityDashboard {
+    padding: 10px;
+  }
+  
+  .securityCard {
+    margin-bottom: 15px;
+  }
+} 

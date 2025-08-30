@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\backend",
+    "\\backend\\Models",
+    "\\frontend\\src",
+    "\\frontend\\src\\pages"
+  ],
+  "SelectedNode": "\\backend\\Models\\Message.cs",
+  "PreviewInSolutionExplorer": false
+}

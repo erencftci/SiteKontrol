@@ -1,0 +1,132 @@
+.dashboardRoot {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #1b222c 0%, #202632 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboardAppBar {
+  position: sticky;
+  top: 0;
+  z-index: 1201;
+  background: rgba(20, 26, 36, 0.6);
+  box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 0;
+  width: 100%;
+  left: 0;
+}
+
+.dashboardContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 32px 24px 0 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.greetingBox {
+  background: rgba(255,255,255,0.05);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.32);
+  padding: 28px 28px 22px 28px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+.greetingBox::before {
+  content: '';
+  position: absolute;
+  right: -60px;
+  top: -60px;
+  width: 180px;
+  height: 180px;
+  background: linear-gradient(135deg, #1976d2 0%, #00d4ff 100%);
+  opacity: 0.10;
+  border-radius: 50%;
+  z-index: 0;
+}
+.greetingText {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #d7e3fc;
+  margin-bottom: 8px;
+  z-index: 1;
+}
+.greetingSub {
+  font-size: 1.1rem;
+  color: #99a6b6;
+  z-index: 1;
+}
+
+.statsGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.statCard {
+  background: rgba(255,255,255,0.045);
+  border-radius: 18px;
+  box-shadow: 0 8px 26px 0 rgba(0,0,0,0.28);
+  padding: 26px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.2s cubic-bezier(.4,2,.6,1), box-shadow 0.2s;
+  cursor: pointer;
+  position: relative;
+}
+.statCard:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 16px 44px 0 rgba(0,0,0,0.36);
+  background: rgba(255,255,255,0.06);
+}
+
+.statIcon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  opacity: 0.85;
+}
+
+.statTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+.statValue {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--stat-color, #97b3ff);
+  margin-bottom: 4px;
+}
+
+.statDesc {
+  font-size: 0.95rem;
+  color: #b0b8c1;
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .dashboardContent {
+    padding: 16px 10px 0 10px;
+    width: 100%;
+  }
+  .statsGrid {
+    gap: 16px;
+  }
+  .statCard { padding: 18px 12px; }
+  .greetingBox { padding: 20px 12px 14px 12px; }
+} 
